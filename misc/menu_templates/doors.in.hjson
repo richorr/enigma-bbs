@@ -23,6 +23,10 @@
                 //  Below are some examples. See the documentation for more info.
                 //
                 {
+                    value: { command: "PYROTO" }
+                    action: @menu:doorPyroto
+                }
+                {
                     value: { command: "ABRACADABRA" }
                     action: @menu:doorAbracadabraExample
                 }
@@ -51,6 +55,19 @@
         //  This example assumes launch_door.sh (which is passed args)
         //  launches the door.
         //
+        doorPyroto : {
+            desc: Mystic Mountain Pyroto
+            module: abracadabra
+            config:{
+                name: Pyroto Mountain
+                args: [
+                    "X:\\PYROTO\\PYROTO /DOOR///0/"
+                ]
+                nodeMax: 1
+                tooManyArt : DOORMANY
+                io: stdio
+            }
+        }
         doorAbracadabraExample: {
             desc: Abracadabra Example
             module: abracadabra
